@@ -1,6 +1,6 @@
 # Spec: `akses` — login & akun pengguna
 
-Module 1 of 5 in [CAPABILITY-MAP.md](CAPABILITY-MAP.md) (approved 2026-11-25). Status: **APPROVED** 2026-11-25. Open questions resolved by default: name "Dokumen Klinik PJM"; jabatan list as written; repo `koeifreak-bit/klinik-pjm-dokumen` (private).
+Module 1 of 5 in [CAPABILITY-MAP.md](CAPABILITY-MAP.md) (approved 2026-11-25). Status: **APPROVED** 2026-11-25. Open questions resolved by default: name "Dokumen Klinik PJM"; jabatan list as written; repo `koeifreak-bit/klinik-pjm-dokumen` (public, by owner's choice).
 This spec also sets up the project skeleton (repo, build, deploy) that every later module uses.
 
 ## Objective
@@ -102,10 +102,10 @@ export function Pengguna({ profil }) {
 ## Boundaries
 - **Always:** UI text in Bahasa Indonesia; build passes before packaging; SQL tests pass before a migration goes live; check affected rows on UPDATE/DELETE; keep the database password, service key and DB URL out of chat, screenshots and GitHub.
 - **Ask first:** new npm dependencies; changing the module map or build order; anything that sends data to a third party.
-- **Never:** commit secrets or `.env`; make the GitHub repo public (it will hold patient-document code paths and config); hard-delete patient documents (module 4).
+- **Never:** commit secrets or `.env`; put patient data, passwords, the secret key or the DB URL in the repo (it is public); hard-delete patient documents (module 4).
 
 ## Success Criteria
-1. `vite build` succeeds, and the app deploys to a `*.workers.dev` URL from a **private** GitHub repo.
+1. `vite build` succeeds, and the app deploys to a `*.workers.dev` URL from the GitHub repo (public, by owner's choice).
 2. The login page and all `akses` screens show only Bahasa Indonesia text.
 3. An admin creates a user in the app, and that user can sign in at once with the given password.
 4. A non-admin cannot open the Pengguna page, and any attempt to add or edit users through the API is rejected (SQL test).

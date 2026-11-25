@@ -1,6 +1,6 @@
 # Capability Map: Dokumen Keperawatan, Klinik PT Prima Jasa Medica
 
-Status: **APPROVED** 2026-11-25. GitHub: private repo `koeifreak-bit/klinik-pjm-dokumen`. Supabase: new, separate account.
+Status: **APPROVED** 2026-11-25. GitHub: **public** repo `koeifreak-bit/klinik-pjm-dokumen` (owner chose public, 2026-11-25; it holds code only, no data or secrets). Supabase: new, separate account.
 
 ## What we're building
 A web app in **Bahasa Indonesia** for the nursing team and office administration of Klinik PT Prima Jasa Medica. It manages three kinds of documents chosen by the owner:
