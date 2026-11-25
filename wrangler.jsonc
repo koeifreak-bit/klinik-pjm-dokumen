@@ -1,0 +1,10 @@
+{
+  // Cloudflare Worker yang hanya menyajikan hasil build Vite (folder dist).
+  "name": "klinik-pjm-dokumen",
+  "compatibility_date": "2025-09-01",
+  "assets": {
+    "directory": "./dist",
+    // Semua alamat yang tidak dikenal kembali ke index.html (aplikasi satu halaman).
+    "not_found_handling": "single-page-application"
+  }
+}
